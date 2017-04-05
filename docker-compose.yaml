@@ -1,0 +1,9 @@
+version: '3'
+services:
+  zipline:
+    build: .
+    volumes:
+      - .:/root
+    ports:
+      - 8888:8888
+    restart: always
