@@ -10,19 +10,22 @@ RUN apt-get update \
        --recursive \
        /var/lib/apt/lists/*
 
-ENV ANACONDA_INSTALLER_URL=https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+ENV MINICONDA_INSTALLER_URL=https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh \
+    PATH=~/miniconda3/bin:$PATH
 
 WORKDIR /root
 
-# Download and install Anaconda and Zipline
+# Install Anaconda and Zipline
 RUN curl --fail \
          --insecure \
          --output install.sh \
-         ${ANACONDA_INSTALLER_URL} \
+         ${MINICONDA_INSTALLER_URL} \
  && bash install.sh -b \
-                    -p ~/miniconda \
+                    -p ~/miniconda3 \
  && rm install.sh \
- && bash -c "source ~/miniconda/bin/activate \
+ && bash -c "source activate \
+          && conda update --yes \
+                          conda \
           && conda create --name zipline \
                           --yes \
                           anaconda \
@@ -30,4 +33,11 @@ RUN curl --fail \
           && source activate zipline \
           && conda install --channel Quantopian \
                            --yes \
-                           zipline"
+                           zipline" \
+ && mkdir notebooks
+
+CMD bash -c "source activate zipline \
+          && jupyter notebook --ip='*' \
+                              --no-browser \
+                              --notebook-dir=~/notebooks \
+                              --NotebookApp.token=''"

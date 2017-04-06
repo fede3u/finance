@@ -3,7 +3,6 @@ services:
   zipline:
     build: .
     volumes:
-      - .:/root
+      - ./notebooks:/root/notebooks
     ports:
       - 8888:8888
-    restart: always
