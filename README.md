@@ -1,6 +1,6 @@
 Zipline in Docker
 ================================================================================
-[Zipline](http://www.zipline.io) is an algorithmic trading library written in Python, and [Anaconda](https://www.continuum.io/anaconda-overview) is a data science platform. Installing Zipline with Anaconda in a Docker container is useful for testing trading strategies in a [Jupyter Notebook](http://jupyter.org).
+[Zipline](http://www.zipline.io) is an algorithmic trading library written in Python, and [Anaconda](https://www.continuum.io/anaconda-overview) is a data science platform. Having Zipline and Anaconda in a Docker container is useful for testing trading strategies privately in a [Jupyter Notebook](http://jupyter.org).
 
 
 Bring up a Jupyter Notebook at [http://localhost:8888](http://localhost:8888)
