@@ -15,7 +15,7 @@ ENV MINICONDA_INSTALLER_URL=https://repo.continuum.io/miniconda/Miniconda3-lates
 
 WORKDIR /root
 
-# Install Anaconda and Zipline
+# Install Anaconda and Zipline, and configure Jupyter Notebook
 RUN curl --fail \
          --insecure \
          --output install.sh \
@@ -33,7 +33,11 @@ RUN curl --fail \
           && source activate zipline \
           && conda install --channel Quantopian \
                            --yes \
-                           zipline" \
+                           zipline \
+          && conda install --channel conda-forge \
+                           --yes \
+                           ipyparallel \
+          && ipcluster nbextension enable" \
  && mkdir notebooks
 
 CMD bash -c "source activate zipline \
