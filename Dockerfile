@@ -11,7 +11,9 @@ RUN apt-get update \
        /var/lib/apt/lists/*
 
 ENV MINICONDA_INSTALLER_URL=https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh \
-    PATH=~/miniconda3/bin:$PATH
+    PATH=~/miniconda3/bin:$PATH \
+    LC_ALL=C.UTF-8 \
+    LANG=C.UTF-8
 
 WORKDIR /root
 
