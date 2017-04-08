@@ -3,6 +3,7 @@ services:
   zipline:
     build: .
     volumes:
+      - ./.zipline:/root/.zipline
       - ./notebooks:/root/notebooks
     ports:
       - 8888:8888

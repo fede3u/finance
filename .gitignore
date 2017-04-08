@@ -1,2 +1,5 @@
+.zipline/*
+!.zipline/README.md
 notebooks/*
 !notebooks/README.md
+!notebooks/Example.ipynb

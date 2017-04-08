@@ -14,6 +14,16 @@ This will save notebooks outside of the Docker container.
 docker run -it --rm -p 8888:8888 -v $PWD:/root/notebooks modernscribe/zipline
 ```
 
+To find the running container's name
+```sh
+docker ps -a
+```
+
+To connect to the running container
+```sh
+docker exec -it <container name> bash
+```
+
 
 Bring up a Jupyter Notebook with Docker Compose
 --------------------------------------------------------------------------------

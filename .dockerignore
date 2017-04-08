@@ -1,3 +1,6 @@
-notebooks
+.zipline/
+notebooks/
+.gitignore
+docker-compose.yaml
 LICENSE
 README.md

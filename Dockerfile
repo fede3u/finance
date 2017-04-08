@@ -40,7 +40,8 @@ RUN curl --fail \
                            --yes \
                            ipyparallel \
           && ipcluster nbextension enable" \
- && mkdir notebooks
+ && mkdir .zipline \
+          notebooks
 
 CMD bash -c "source activate zipline \
           && jupyter notebook --ip='*' \
