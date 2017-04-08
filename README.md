@@ -11,17 +11,17 @@ docker run -it --rm -p 8888:8888 modernscribe/zipline
 
 Then, view the notebook at [http://localhost:8888](http://localhost:8888).
 
-This will save notebooks outside of the Docker container.
+This will save notebooks outside of the Docker container:
 ```sh
 docker run -it --rm -p 8888:8888 -v $PWD:/root/notebooks modernscribe/zipline 
 ```
 
-You can find the running container's name.
+You can find the running container's name like so:
 ```sh
 docker ps -a
 ```
 
-Then, you can use the container's name to connect to the running container if you'd like to run commands outside of the notebook:
+Then, you can use the container's name to connect to the running container if you'd like to run commands outside of the notebook with this:
 ```sh
 docker exec -it <container name> bash
 ```
