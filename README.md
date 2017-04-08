@@ -21,7 +21,7 @@ You can find the running container's name like so:
 docker ps -a
 ```
 
-Then, you can use the container's name to connect to the running container if you'd like to run commands outside of the notebook with this:
+Then, you can use the container's name to connect to the running container if you'd like to run commands outside of the notebook.
 ```sh
 docker exec -it <container name> bash
 ```
