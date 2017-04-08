@@ -27,7 +27,7 @@ docker exec -it <container name> bash
 ```
 
 
-Bring up a Jupyter Notebook with Docker Compose
+Bring up a notebook with Docker Compose
 --------------------------------------------------------------------------------
 After getting the files from [github.com/modernscribe/zipline](https://github.com/modernscribe/zipline), run the following command to bring up Jupyter Notebook at [http://localhost:8888](http://localhost:8888). This will store notebooks and cached data outside of the Docker container.
 ```sh
