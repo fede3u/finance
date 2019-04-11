@@ -6,14 +6,14 @@ Zipline, Anaconda & Jupyter Notebook in Docker
 Bring up Jupyter Notebook
 --------------------------------------------------------------------------------
 ```sh
-docker run -it --rm -p 8888:8888 modernscribe/zipline
+docker run -it --rm -p 8888:8888 fede3u/finance
 ```
 
 Then, view the notebook at [http://localhost:8888](http://localhost:8888).
 
 This will save notebooks outside of the Docker container:
 ```sh
-docker run -it --rm -p 8888:8888 -v $PWD:/root/notebooks modernscribe/zipline 
+docker run -it --rm -p 8888:8888 -v $PWD:/root/notebooks fede3u/finance 
 ```
 
 You can find the running container's name like so:
