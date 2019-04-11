@@ -38,13 +38,12 @@ RUN curl --fail \
                            zipline \
           && conda install --channel conda-forge \
                            --yes \
-                           ipyparallel \
-          && ipcluster nbextension enable" \
+                           jupyterlab "\
  && mkdir .zipline \
           notebooks
 
 CMD bash -c "source activate zipline \
-          && jupyter notebook --ip='*' \
+          && jupyter lab --ip='*' \
                               --no-browser \
                               --notebook-dir=~/notebooks \
                               --NotebookApp.token=''"
