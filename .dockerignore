@@ -5,3 +5,4 @@ notebooks/
 docker-compose.yaml
 LICENSE
 README.md
+.idea/

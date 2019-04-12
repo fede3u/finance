@@ -37,6 +37,9 @@ RUN curl --fail \
                            --yes \
                            zipline \
           && conda install --channel conda-forge \
+                           --yes\
+                           quandl \
+          && conda install --channel conda-forge \
                            --yes \
                            jupyterlab "\
  && mkdir .zipline \
