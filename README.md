@@ -1,6 +1,6 @@
 Quandl, Anaconda & Jupyter Lab in Docker
 ================================================================================
-[Quandl](https://www.quandl.com) is is a marketplace for financial, economic and alternative data delivered in modern formats,  [Anaconda](https://www.anaconda.com) is a data science platform. Having Zipline, Quandl and Anaconda in a Docker container is useful for analyzing financial data and testing trading strategies in [Jupyter Notebook](http://jupyter.org) on your own computer.
+[Quandl](https://www.quandl.com) is is a marketplace for financial, [Plotly] (https://plot.ly/) is a framework for charting and building analytic web apps,[Anaconda](https://www.anaconda.com) is a data science platform. Having Quandl, Plotly and Anaconda in a Docker container is useful for analyzing financial data and testing trading strategies in [Jupyter Notebook](http://jupyter.org) on your own computer.
 
 
 Bring up Jupyter Notebook
