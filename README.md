@@ -1,6 +1,6 @@
-Zipline(Quantopian), Quandl, Anaconda & Jupyter Lab in Docker
+Quandl, Anaconda & Jupyter Lab in Docker
 ================================================================================
-[Zipline](http://www.zipline.io) is an algorithmic trading library written in Python, and [Quandl](https://www.quandl.com) is is a marketplace for financial, economic and alternative data delivered in modern formats,  [Anaconda](https://www.anaconda.com) is a data science platform. Having Zipline, Quandl and Anaconda in a Docker container is useful for analyzing financial data and testing trading strategies in [Jupyter Notebook](http://jupyter.org) on your own computer.
+[Quandl](https://www.quandl.com) is is a marketplace for financial, economic and alternative data delivered in modern formats,  [Anaconda](https://www.anaconda.com) is a data science platform. Having Zipline, Quandl and Anaconda in a Docker container is useful for analyzing financial data and testing trading strategies in [Jupyter Notebook](http://jupyter.org) on your own computer.
 
 
 Bring up Jupyter Notebook
