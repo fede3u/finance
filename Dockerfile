@@ -17,7 +17,7 @@ ENV MINICONDA_INSTALLER_URL=https://repo.continuum.io/miniconda/Miniconda3-lates
 
 WORKDIR /root
 
-# Install Anaconda and Zipline, and configure Jupyter Notebook
+# Install Anaconda, Quandal and configure Jupyter Notebook
 RUN curl --fail \
          --insecure \
          --output install.sh \
@@ -28,24 +28,20 @@ RUN curl --fail \
  && bash -c "source activate \
           && conda update --yes \
                           conda \
-          && conda create --name zipline \
+          && conda create --name finance \
                           --yes \
                           anaconda \
-                          python=3.4 \
-          && source activate zipline \
-          && conda install --channel Quantopian \
-                           --yes \
-                           zipline \
+          && source activate finance \
           && conda install --channel conda-forge \
                            --yes\
                            quandl \
           && conda install --channel conda-forge \
                            --yes \
                            jupyterlab "\
- && mkdir .zipline \
+ && mkdir .finance \
           notebooks
 
-CMD bash -c "source activate zipline \
+CMD bash -c "source activate finance \
           && jupyter lab --ip='*' \
                               --no-browser \
                               --notebook-dir=~/notebooks \
