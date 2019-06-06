@@ -17,7 +17,7 @@ ENV MINICONDA_INSTALLER_URL=https://repo.continuum.io/miniconda/Miniconda3-lates
 
 WORKDIR /root
 
-# Install Anaconda, Quandal and configure Jupyter Notebook
+# Install Anaconda and Zipline, and configure Jupyter Notebook
 RUN curl --fail \
          --insecure \
          --output install.sh \
@@ -37,12 +37,16 @@ RUN curl --fail \
                            quandl \
           && conda install --channel conda-forge \
                            --yes \
-                           jupyterlab "\
- && mkdir .finance \
+                           jupyterlab \
+          && pip install plotly "\
+
+ && mkdir .finance\
           notebooks
 
 CMD bash -c "source activate finance \
-          && jupyter lab --ip='*' \
+          && jupyter lab --ip='0.0.0.0' \
                               --no-browser \
+                              --allow-root \
                               --notebook-dir=~/notebooks \
                               --NotebookApp.token=''"
+
